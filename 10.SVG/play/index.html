@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #ani {
+      position: relative;
+      animation: demo 5s ease-out none 1 normal;
+    }
+
+    @keyframes demo {
+      28% {
+        transform: translate(55rem, 13rem) rotate(20deg) scale(0.7); }
+      35% {
+        transform: translate(45rem, -8rem) rotate(-160deg) scale(0.5); }
+      85% {
+        transform: translate(-15rem, -4rem) rotate(-180deg) scale(0.7); }
+      90% {
+        transform: translate(-15rem, 0) rotate(0deg); }
+      100% {
+        transform: rotate(0deg); } 
+    }
+  </style>
+</head>
+<body>
+
+  <svg>
+    <path id="my-path1" d="M150 0 L75 200 L225 200 L 300 400 Z" style="fill: none; stroke: #555;stroke-width: 2;"/>
+  </svg>
+
+  <svg id="ani" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 100px; height: 100px">
+    <path id="my-path" 
+      d="M 17.179 45.195 C 37.466 17.501 57.11 17.501 76.109 45.195 C 84.929 58.051 75.268 70.288 47.127 81.905 C 34.909 86.949 35.553 73.746 49.059 42.297 Q 57.148 23.461 82.871 19.111" 
+      style="fill: none; stroke: black; stroke-width: 2;"/>
+  </svg>
+
+  <script src="http://cdn.bootcss.com/segment-js/1.0.8/segment.min.js"></script>
+  <script>
+    var myPath = document.getElementById("my-path"),
+        segment = new Segment(myPath);
+
+    segment.draw("100%", 0, 3);
+    //segment.draw(0, "100%", 1);
+  </script>
+</body>
+</html>
