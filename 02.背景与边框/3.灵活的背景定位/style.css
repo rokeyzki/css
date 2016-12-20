@@ -1,0 +1,51 @@
+/**
+ * Flexible background positioning
+ * via extended background-position
+ */
+
+#demo1 {
+	background: url(http://csssecrets.io/images/code-pirate.svg)
+	            no-repeat bottom right #58a;
+	background-position: right 20px bottom 10px;
+	
+	/* Styling */
+	max-width: 10em;
+	min-height: 5em;
+	padding: 10px;
+	color: white;
+	font: 100%/1 sans-serif;
+}
+
+/**
+ * Flexible background positioning
+ * via extended background-position
+ */
+#demo2 {
+	background: url(http://csssecrets.io/images/code-pirate.svg)
+	            no-repeat bottom right #58a;
+	background-origin: content-box;
+	
+	/* Styling */
+	max-width: 10em;
+	min-height: 5em;
+	padding: 10px;
+	color: white;
+	font: 100%/1 sans-serif;
+}
+
+/**
+ * Flexible background positioning
+ * via calc()
+ */
+#demo3 {
+	background: url(http://csssecrets.io/images/code-pirate.svg)
+	            no-repeat bottom right #58a;
+	background-position: calc(100% - 20px) calc(100% - 10px);
+	
+	/* Styling */
+	max-width: 10em;
+	min-height: 5em;
+	padding: 10px;
+	color: white;
+	font: 100%/1 sans-serif;
+}
